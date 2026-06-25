@@ -3,6 +3,9 @@
 
 <head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Word Meaning Quiz</title>
 
 
@@ -23,6 +26,8 @@ display:flex;
 justify-content:center;
 align-items:center;
 
+padding:16px;
+
 font-family:"Segoe UI",Arial;
 
 background:linear-gradient(135deg,#667eea,#764ba2);
@@ -33,7 +38,8 @@ background:linear-gradient(135deg,#667eea,#764ba2);
 
 .container{
 
-width:450px;
+width:100%;
+max-width:450px;
 
 background:white;
 
@@ -220,6 +226,65 @@ background:#f7f8fc;
 padding:20px;
 
 border-radius:15px;
+
+}
+
+
+#options button{
+word-break:break-word;
+overflow-wrap:anywhere;
+line-height:1.4;
+}
+
+
+/* ---- Mobile / responsive ---- */
+@media (max-width:480px){
+
+.container{
+padding:18px;
+border-radius:16px;
+}
+
+h1{
+font-size:24px;
+}
+
+h2{
+font-size:18px;
+}
+
+button{
+padding:14px;
+font-size:15px;
+}
+
+#stats{
+gap:6px;
+}
+
+#stats div{
+padding:8px;
+font-size:13px;
+}
+
+#stats b{
+font-size:18px;
+}
+
+#score{
+font-size:18px;
+padding:16px;
+}
+
+}
+
+
+/* Disable hover lift on touch devices to avoid sticky states */
+@media (hover:none){
+
+button:hover{
+transform:none;
+}
 
 }
 
